@@ -1,0 +1,2 @@
+# gitzadania
+kodilla
