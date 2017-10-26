@@ -7,7 +7,7 @@ module.exports = function (grunt) {
             },
             dist: {
                 files: {
-                    'main.css': 'main.sass'
+                    'css/main.css': 'sass/main.sass'
                 }
             }
         },
@@ -18,7 +18,7 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: 'images/',
                     src: ['**/*.{png,jpg,gif}'],
-                    dest: 'images/build/'
+                    dest: 'images_build'
                 }]
             }
         },
@@ -31,7 +31,7 @@ module.exports = function (grunt) {
                 },
             }
         },
-        //browserSync
+        //browserSync?
         browserSync: {
             default_options: {
                 bsFiles: {
@@ -54,10 +54,9 @@ module.exports = function (grunt) {
         console.log('It does not work');
     });
     grunt.loadNpmTasks('grunt-sass');
-    grunt.loadNpmTasks('grunt-watch');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-browser-sync');
-    grunt.registerTask('default', ['browserSync', 'watch']);
-    grunt.registerTask('default', ['sass', 'imagemin','watch']);
+    grunt.registerTask('default', ['sass','browserSync','imagemin','watch']);
     
 };
