@@ -1,2 +1,3 @@
-# gitzadania
-kodilla
+Used:
+  ❃ Grunt
+  ❃ Git
